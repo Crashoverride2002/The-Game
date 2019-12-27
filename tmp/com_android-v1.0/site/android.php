@@ -5,7 +5,7 @@ defined('_JEXEC') or die;
 jimport('joomla.application.component.controller');
 jimport('joomla.plugin.helper');
 
-class ApiGetNewGame extends ApiController
+class ApiAndroid extends ApiController
 {
     public $callbackname = 'callback';
 
@@ -58,6 +58,29 @@ class ApiGetNewGame extends ApiController
 	    echo $this->response($e);
 	}
     }  
+    public function authenticate()
+    {
+	$this->validateInstall();
+	$app = JFactory::getApplication();
+	$providerName = $app->input->json->get('provider','','STRING');
+	$accessToken = $app->input->json->get('access_token','','STRING');
+	if (empty($providerName))
+	{
+	    ApiError::raiseError(400,JText::_('COM_API_JFBCONNECTION_MISSING_PROVIDER');
+	}
+	if (empty($accessToken))
+	{
+	    ApiError::raiseError(400,JText::_('COM_API_JFBCONNECTION_MISSING_ACCESS_TOKEN');
+	}
+	$provider = $this->jfbGetProvider($providerName);
+	JUserId = $this->jfbGetJoomlaUserId($provider,$accessToken);
+
+	if (!$jUserId)
+	{
+	    $jUserID = $this->jbfRegisterUser($provider);
+	}
+	return $jUserId;
+    }
     private function respond($response)
     {
 	$app = JFactory::getApplication();
