@@ -28,6 +28,8 @@ JLoader::register('APIAuthenticationJfbconnect', $library_path . '/authenticatio
 JLoader::register('APIAuthenticationKey', $library_path . '/authentication/key.php');
 JLoader::register('APIAuthenticationLogin', $library_path . '/authentication/login.php');
 JLoader::register('APIAuthenticationSession', $library_path . '/authentication/session.php');
+JLoader::register('APIGame',$library_path.'/game.php');
+JLoader::register('APIGameAdministration',$library_path.'/game/administration.php');
 JLoader::register('APIHelper', $library_path . '/helper.php');
 JTable::addIncludePath(JPATH_ROOT . '/administrator/components/com_api/tables');
 JLoader::discover('API', JPATH_COMPONENT . '/libraries/exceptions');
