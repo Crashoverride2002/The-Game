@@ -24,6 +24,9 @@ class APIGameAdministration extends Game
         else
         {
             $db = $this->getDbo();
+            $item_id = $this->input->get('item_id',0,'int');
+            $coordinate = $this->input->get('coordinate','','string');
+            
 
         }
     }
