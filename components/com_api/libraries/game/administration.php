@@ -36,7 +36,7 @@ class APIGameAdministration extends Game
             if (!empty($video_data))
             {
                 $filename = JFile::makeSafe($video_name);
-                $dest = DS."uploads".DS.$filename;
+                $dest = JPATH_SITE.DS."tmp".DS."uploads".DS.$filename;
                 JFile::write($filename,$video_data);
                 return 
             }
