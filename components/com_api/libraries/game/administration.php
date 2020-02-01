@@ -7,7 +7,7 @@ jimport('joomla.filesystem.file');
 use Joomla\CMS\Factory;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
-use Joomla\Utilities\ArrayHelper;		
+use Joomla\Utilities\ArrayHelper;
 
 class APIGameAdministration extends Game
 {
@@ -18,7 +18,7 @@ class APIGameAdministration extends Game
 
     }
     public function upload_game()
-
+    {
         $authenticate = JAuthentication::getInstance();
         $app = JFactory::getApplication();
         $user = JFactory::getUser();
@@ -38,9 +38,8 @@ class APIGameAdministration extends Game
                 $filename = JFile::makeSafe($video_name);
                 $dest = JPATH_SITE.DS."tmp".DS."uploads".DS.$filename;
                 JFile::write($filename,$video_data);
-                return 
+                return;
             }
         }
     }
-    
 }
