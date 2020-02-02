@@ -1,5 +1,15 @@
 use TheGame;
 
+CREATE TABLE `Game_gamedefine` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) not null default `Unknown`,
+    `fk_game_type_id` int(11) NOT NULL,
+    `fk_design_id` int(11) not null, 
+    `geoloc` varchar(100),
+    `lmod` datetime,
+    primary key (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 CREATE TABLE `Game_gamedef` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
