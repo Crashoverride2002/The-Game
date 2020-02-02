@@ -1,8 +1,9 @@
 use TheGame;
 
+DROP TABLE if exists `Game_gamedefine`;
 CREATE TABLE `Game_gamedefine` (
     `id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(100) not null default `Unknown`,
+    `name` varchar(100) not null default 'Unknown',
     `fk_game_type_id` int(11) NOT NULL,
     `fk_design_id` int(11) not null, 
     `geoloc` varchar(100),
@@ -10,6 +11,7 @@ CREATE TABLE `Game_gamedefine` (
     primary key (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+DROP TABLE if exists `Game_gamedef`;
 CREATE TABLE `Game_gamedef` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
@@ -20,6 +22,7 @@ CREATE TABLE `Game_gamedef` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+DROP TABLE if exists `Game_geolocs`;
 CREATE TABLE `GAME_geolocs` (
     `id` int(11) not null auto_increment,
     `game_id` int(11) not null,
@@ -29,6 +32,7 @@ CREATE TABLE `GAME_geolocs` (
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+DROP TABLE if exists `Game_gametypes`;
 CREATE TABLE `GAME_gametypes` (
     `id` int(11) not null auto_increment,
     `type_name` varchar(200) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT '',
