@@ -20,7 +20,7 @@ CREATE TABLE `Game_gamedef` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
-CREATE TABLE `GAME_geoloc` (
+CREATE TABLE `GAME_geolocs` (
     `id` int(11) not null auto_increment,
     `game_id` int(11) not null,
     `street_name` varchar(350) not null default 'No where.',
