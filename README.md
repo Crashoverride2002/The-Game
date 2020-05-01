@@ -15,4 +15,5 @@ Some one has been killed << VIRTUALLY >> and your given hints and clues on your 
 Some one has died and you are tasked with finding out whom did it or why the ghost has not crossed over to the other side, again you will use clues items and your trusty notebook to figure out whom did what and why.
 
 # All the quest are stored on a site that you can access on the internet browser, or via your phone, but on the phone only quest that are near you will be available to view.
-All the quest might be on a cruise, or in a part of the world a hotel or some historical place. 
+All the quest might be on a cruise, or in a part of the world a hotel or some historical place.
+So open youre browser go to <<TheGame>> and search of a quest type or a location, but you need to hurry, other might have done the same and the first to solve the quest gets the price.
